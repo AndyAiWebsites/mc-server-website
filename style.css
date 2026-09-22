@@ -195,9 +195,9 @@ a:hover { text-decoration: underline; }
 
 .hero-beta {
   font-family: var(--font-head);
-  font-size: clamp(12px, 1.6vw, 15px);
+  font-size: clamp(20px, 3vw, 30px);
   font-weight: 600;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   text-transform: uppercase;
   color: #a5e4ff;
   text-shadow: 0 0 10px #38bdf8, 0 0 22px #38bdf8;
