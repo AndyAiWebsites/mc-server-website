@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andy's Savar — Minecraft SMP</title>
+  <meta name="description" content="Andy's Savar — a friendly Minecraft SMP with crossplay, voice chat, duels, an auction house and more. Join now!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#top" class="brand">ANDY'S SAVAR</a>
+      <nav class="nav">
+        <a href="#join">Join</a>
+        <a href="#features">Features</a>
+        <a href="#crew">Crew</a>
+        <a href="#rules">Rules</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#appeal">Ban Appeal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="hero-status"><span id="dot" class="dot"></span> <span id="statusText">Checking status...</span></p>
+        <h1 class="hero-title">ANDY'S <span>SAVAR</span></h1>
+        <p class="hero-tag">a cozy survival multiplayer. build. trade. duel. chill.</p>
+
+        <div class="ip-box">
+          <div class="ip-label">JAVA SERVER IP</div>
+          <div class="ip-row">
+            <code id="javaIp" class="ip">della-workload.tun.ply.gg:25565</code>
+            <button class="btn copy-btn" data-copy="della-workload.tun.ply.gg:25565">COPY</button>
+          </div>
+        </div>
+
+        <div class="hero-meta">
+          <span class="chip">Minecraft 26.2</span>
+          <span class="chip">Survival</span>
+          <span class="chip">Crossplay</span>
+          <span class="chip">Voice Chat</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="section">
+      <h2 class="section-title">HOW TO JOIN</h2>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="java">JAVA (PC)</button>
+        <button class="tab-btn" data-tab="bedrock">BEDROCK (Phone/Console)</button>
+      </div>
+
+      <div id="tab-java" class="tab-panel active">
+        <p class="lead">Open Minecraft → <b>Multiplayer</b> → <b>Add Server</b> and paste the address:</p>
+        <div class="ip-box">
+          <div class="ip-row">
+            <code class="ip">della-workload.tun.ply.gg:25565</code>
+            <button class="btn copy-btn" data-copy="della-workload.tun.ply.gg:25565">COPY</button>
+          </div>
+        </div>
+        <p class="hint">Any recent Minecraft version works — ViaVersion lets older clients join.</p>
+      </div>
+
+      <div id="tab-bedrock" class="tab-panel">
+        <p class="lead">Open Minecraft → <b>Play</b> → <b>Servers</b> → <b>Add Server</b> and enter:</p>
+        <div class="ip-box">
+          <div class="ip-row">
+            <code class="ip">della-rig.tun.ply.gg:36755</code>
+            <button class="btn copy-btn" data-copy="della-rig.tun.ply.gg:36755">COPY</button>
+          </div>
+        </div>
+        <p class="hint">Bedrock players join through Geyser — no mods needed on your device.</p>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2 class="section-title">FEATURES</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>SMP + ECONOMY</h3>
+          <p>Survival with a real economy — player shops, an auction house, loot crates and a spawn-stash to keep your stuff safe.</p>
+        </div>
+        <div class="card">
+          <h3>DUELS &amp; FFA</h3>
+          <p>PvP when you want it: 1v1 duels and free-for-all arenas, separate from peaceful survival.</p>
+        </div>
+        <div class="card">
+          <h3>CROSSPLAY</h3>
+          <p>Java and Bedrock players together on one server. Old versions welcome thanks to ViaVersion.</p>
+        </div>
+        <div class="card">
+          <h3>VOICE CHAT</h3>
+          <p>Proximity voice chat is on — talk to your friends like you're really standing next to them.</p>
+        </div>
+        <div class="card">
+          <h3>CUSTOM TOUCHES</h3>
+          <p>Custom villager trades, custom enchantments, emotes, random teleports and more little extras.</p>
+        </div>
+        <div class="card">
+          <h3>FAIR PLAY</h3>
+          <p>GrimAC anticheat keeps cheaters out so everyone plays on even ground.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="crew" class="section">
+      <h2 class="section-title">THE CREW</h2>
+      <div class="crew">
+        <div class="member">
+          <div class="face owner">A</div>
+          <div class="member-info">
+            <b>Andy11cool</b>
+            <span class="role owner">Owner</span>
+          </div>
+        </div>
+        <div class="member">
+          <div class="face">R</div>
+          <div class="member-info">
+            <b>ruben7cool</b>
+            <span class="role">Crew</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rules" class="section">
+      <h2 class="section-title">RULES</h2>
+      <ol class="rules-list">
+        <li>Be respectful — no toxic chat, no harassment.</li>
+        <li>No griefing or stealing builds.</li>
+        <li>No hacked clients, x-ray, or exploits. Anticheat is watching.</li>
+        <li>No lag machines or giant redstone farms that break the server.</li>
+        <li>Have fun and help each other out.</li>
+      </ol>
+      <p class="hint">Banned? You can appeal below.</p>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2 class="section-title">GALLERY</h2>
+      <div class="gallery">
+        <div class="shot"><span>SCREENSHOT</span></div>
+        <div class="shot"><span>SCREENSHOT</span></div>
+        <div class="shot"><span>SCREENSHOT</span></div>
+        <div class="shot"><span>SCREENSHOT</span></div>
+        <div class="shot"><span>SCREENSHOT</span></div>
+        <div class="shot"><span>SCREENSHOT</span></div>
+      </div>
+      <p class="hint">More screenshots coming soon. Drop your own into the <code>screenshots/</code> folder and they'll appear here.</p>
+    </section>
+
+    <section id="appeal" class="section">
+      <h2 class="section-title">BAN APPEAL</h2>
+      <p class="lead">Got banned and think it's a mistake? Fill this out and it's emailed to the owner. Appeals go to <b>andy15mb@gmail.com</b>.</p>
+      <form id="appealForm" action="https://formsubmit.co/andy15mb@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="Ban Appeal — Andy's Savar">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+
+        <label for="f-name">Minecraft username *</label>
+        <input id="f-name" type="text" name="Minecraft Username" required placeholder="e.g. Steve_99">
+
+        <label for="f-email">Your email *</label>
+        <input id="f-email" type="email" name="Your Email" required placeholder="you@example.com">
+
+        <label for="f-reason">Why were you banned? Tell your side *</label>
+        <textarea id="f-reason" name="Reason" rows="5" required placeholder="Describe what happened..."></textarea>
+
+        <label for="f-evidence">Additional context</label>
+        <textarea id="f-evidence" name="Evidence" rows="3" placeholder="Any extra details that help your case..."></textarea>
+
+        <label for="f-file">Screenshot / evidence</label>
+        <input id="f-file" type="file" name="Screenshot" accept="image/*">
+
+        <button id="appealSubmit" class="btn big" type="submit">SEND APPEAL</button>
+        <p id="appealNote" class="hint">This form uses FormSubmit.co to email the owner. You'll be taken to a confirmation page after sending.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>AROUND AND ONLINE — check who's playing below</p>
+    <div id="footerStatus" class="footer-status">Loading status...</div>
+    <p class="footer-note">Andy's Savar &middot; a Minecraft SMP. Owner: Andy11cool &middot; Contact: <a href="mailto:andy15mb@gmail.com">andy15mb@gmail.com</a> or <a href="mailto:andy15mb@proton.me">andy15mb@proton.me</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

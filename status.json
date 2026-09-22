@@ -1,0 +1,11 @@
+{
+  "host": "della-workload.tun.ply.gg",
+  "port": 25565,
+  "online": false,
+  "updatedAt": null,
+  "version": null,
+  "protocol": null,
+  "motd": null,
+  "players": { "online": 0, "max": 0, "names": [] },
+  "error": "first update pending"
+}

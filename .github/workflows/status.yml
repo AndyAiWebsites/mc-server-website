@@ -1,0 +1,37 @@
+name: Update server status
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [status-update]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: status
+  cancel-in-progress: false
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ping Minecraft server
+        run: node status/ping.js > status.json
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet status.json; then
+            echo "no change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add status.json
+          git commit -m "Update server status"
+          git push
