@@ -141,3 +141,39 @@
     if (el) el.scrollIntoView();
   }
 })();
+
+/* ---------- scroll reveal ---------- */
+(function () {
+  var items = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && items.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          setTimeout(function () {
+            el.classList.add("visible");
+          }, parseInt(el.getAttribute("data-reveal") || "0", 10));
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add("visible"); });
+  }
+})();
+
+/* ---------- file input label ---------- */
+(function () {
+  var input = document.getElementById("f-file");
+  if (input) {
+    input.addEventListener("change", function () {
+      var lbl = document.querySelector(".file-label");
+      if (lbl) {
+        lbl.textContent = input.files && input.files.length
+          ? "Selected: " + input.files[0].name
+          : "Choose an image…";
+      }
+    });
+  }
+})();

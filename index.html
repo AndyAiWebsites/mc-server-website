@@ -5,123 +5,177 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andy's Savar — Minecraft SMP</title>
   <meta name="description" content="Andy's Savar — a friendly Minecraft SMP with crossplay, voice chat, duels, an auction house and more. Join now!">
+  <meta name="theme-color" content="#07090e">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a href="#top" class="brand">ANDY'S SAVAR</a>
-      <nav class="nav">
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">ANDY's <span>SAVAR</span></a>
+      <div class="nav-links">
         <a href="#join">Join</a>
         <a href="#features">Features</a>
         <a href="#crew">Crew</a>
         <a href="#rules">Rules</a>
         <a href="#gallery">Gallery</a>
-        <a href="#appeal">Ban Appeal</a>
-      </nav>
+        <a href="#appeal">Appeal</a>
+      </div>
+      <a href="#join" class="nav-cta">JOIN NOW</a>
     </div>
-  </header>
+  </nav>
 
   <main id="top">
+    <!-- ============ HERO ============ -->
     <section class="hero">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <p class="hero-status"><span id="dot" class="dot"></span> <span id="statusText">Checking status...</span></p>
-        <h1 class="hero-title">ANDY'S <span>SAVAR</span></h1>
-        <p class="hero-tag">a cozy survival multiplayer. build. trade. duel. chill.</p>
+      <div class="blob blob-a" aria-hidden="true"></div>
+      <div class="blob blob-b" aria-hidden="true"></div>
+      <div class="blob blob-c" aria-hidden="true"></div>
 
-        <div class="ip-box">
-          <div class="ip-label">JAVA SERVER IP</div>
-          <div class="ip-row">
-            <code id="javaIp" class="ip">della-workload.tun.ply.gg:25565</code>
-            <button class="btn copy-btn" data-copy="della-workload.tun.ply.gg:25565">COPY</button>
-          </div>
+      <div class="hero-inner">
+        <div class="status-pill" id="statusPill">
+          <span class="dot" id="dot"></span>
+          <span id="statusText">Checking status…</span>
         </div>
 
-        <div class="hero-meta">
+        <h1 class="hero-title">
+          Andy's <span class="grad-text">Savar</span>
+        </h1>
+        <p class="hero-tag">A cozy survival multiplayer. Build, trade, duel &amp; chill.</p>
+
+        <div class="hero-cta">
+          <button class="btn primary copy-btn" data-copy="della-workload.tun.ply.gg:25565">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 9h11l-1.5-5.5-1-1H9v6.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 15H4l1.5 5.5 1 1H15v-6.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            COPY SERVER IP
+          </button>
+          <a class="btn ghost" href="#join">HOW TO JOIN</a>
+        </div>
+
+        <div class="mono-line" aria-hidden="true">
+          <code>della-workload.tun.ply.gg:25565</code>
+        </div>
+
+        <div class="hero-chips">
           <span class="chip">Minecraft 26.2</span>
           <span class="chip">Survival</span>
           <span class="chip">Crossplay</span>
           <span class="chip">Voice Chat</span>
         </div>
       </div>
+
+      <div class="hero-fade" aria-hidden="true"></div>
     </section>
 
-    <section id="join" class="section">
-      <h2 class="section-title">HOW TO JOIN</h2>
-      <div class="tabs">
-        <button class="tab-btn active" data-tab="java">JAVA (PC)</button>
-        <button class="tab-btn" data-tab="bedrock">BEDROCK (Phone/Console)</button>
+    <!-- ============ JOIN ============ -->
+    <section id="join" class="section reveal">
+      <div class="section-head">
+        <span class="kicker">01 — Get connected</span>
+        <h2 class="section-title">How to <span class="grad-text">join</span></h2>
       </div>
 
-      <div id="tab-java" class="tab-panel active">
-        <p class="lead">Open Minecraft → <b>Multiplayer</b> → <b>Add Server</b> and paste the address:</p>
-        <div class="ip-box">
-          <div class="ip-row">
-            <code class="ip">della-workload.tun.ply.gg:25565</code>
-            <button class="btn copy-btn" data-copy="della-workload.tun.ply.gg:25565">COPY</button>
-          </div>
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="java" role="tab" aria-selected="true">Java (PC)</button>
+        <button class="tab-btn" data-tab="bedrock" role="tab" aria-selected="false">Bedrock (Phone / Console)</button>
+      </div>
+
+      <div id="tab-java" class="tab-panel active" role="tabpanel">
+        <p class="lead">Open Minecraft → <b>Multiplayer</b> → <b>Add Server</b>, paste the address, and hop in.</p>
+        <div class="addr-row">
+          <code class="mono addr">della-workload.tun.ply.gg:25565</code>
+          <button class="btn primary copy-btn" data-copy="della-workload.tun.ply.gg:25565">COPY</button>
         </div>
-        <p class="hint">Any recent Minecraft version works — ViaVersion lets older clients join.</p>
+        <p class="hint">Any recent version works — ViaVersion lets older clients join seamlessly.</p>
       </div>
 
-      <div id="tab-bedrock" class="tab-panel">
+      <div id="tab-bedrock" class="tab-panel" role="tabpanel">
         <p class="lead">Open Minecraft → <b>Play</b> → <b>Servers</b> → <b>Add Server</b> and enter:</p>
-        <div class="ip-box">
-          <div class="ip-row">
-            <code class="ip">della-rig.tun.ply.gg:36755</code>
-            <button class="btn copy-btn" data-copy="della-rig.tun.ply.gg:36755">COPY</button>
-          </div>
+        <div class="addr-row">
+          <code class="mono addr">della-rig.tun.ply.gg:36755</code>
+          <button class="btn primary copy-btn" data-copy="della-rig.tun.ply.gg:36755">COPY</button>
         </div>
         <p class="hint">Bedrock players join through Geyser — no mods needed on your device.</p>
       </div>
     </section>
 
-    <section id="features" class="section">
-      <h2 class="section-title">FEATURES</h2>
+    <!-- ============ FEATURES ============ -->
+    <section id="features" class="section reveal">
+      <div class="section-head">
+        <span class="kicker">02 — What you get</span>
+        <h2 class="section-title">Server <span class="grad-text">features</span></h2>
+      </div>
+
       <div class="cards">
-        <div class="card">
-          <h3>SMP + ECONOMY</h3>
-          <p>Survival with a real economy — player shops, an auction house, loot crates and a spawn-stash to keep your stuff safe.</p>
+        <div class="card reveal" data-reveal="0">
+          <div class="card-icon icon-gem"> 
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h12l4 6-10 12L2 9l4-6z"/><path d="M2 9h20M9 3l3 6 3-6M12 21l-3-9-4-3M12 21l3-9 4-3"/></svg>
+          </div>
+          <h3>SMP + Economy</h3>
+          <p>Survival with a real economy — player shops, an auction house, loot crates and a spawn-stash that keeps your items safe.</p>
         </div>
-        <div class="card">
-          <h3>DUELS &amp; FFA</h3>
-          <p>PvP when you want it: 1v1 duels and free-for-all arenas, separate from peaceful survival.</p>
+
+        <div class="card reveal" data-reveal="80">
+          <div class="card-icon icon-fire">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3s6 5 6 11a6 6 0 0 1-12 0c0-2 .8-4 2-5 0 2 1.5 3 3 4 0-3 1-6 5-10z" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Duels &amp; FFA</h3>
+          <p>PvP when you want it — 1v1 duels and free-for-all arenas, kept separate from peaceful survival.</p>
         </div>
-        <div class="card">
-          <h3>CROSSPLAY</h3>
-          <p>Java and Bedrock players together on one server. Old versions welcome thanks to ViaVersion.</p>
+
+        <div class="card reveal" data-reveal="120">
+          <div class="card-icon icon-link">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke-linecap="round"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Crossplay</h3>
+          <p>Java and Bedrock players in the same world. Older versions welcome thanks to ViaVersion.</p>
         </div>
-        <div class="card">
-          <h3>VOICE CHAT</h3>
-          <p>Proximity voice chat is on — talk to your friends like you're really standing next to them.</p>
+
+        <div class="card reveal" data-reveal="0">
+          <div class="card-icon icon-mic">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Voice Chat</h3>
+          <p>Proximity voice chat is on — talk to friends like you're really standing next to them in the world.</p>
         </div>
-        <div class="card">
-          <h3>CUSTOM TOUCHES</h3>
-          <p>Custom villager trades, custom enchantments, emotes, random teleports and more little extras.</p>
+
+        <div class="card reveal" data-reveal="80">
+          <div class="card-icon icon-wand">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 4V2M15 10V8M11.5 5.5h-2M20.5 5.5h-2" stroke-linecap="round"/><path d="M15 6l6 6-8 8-6-6 8-8z" stroke-linejoin="round"/><path d="M4 20l2 2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Custom Touches</h3>
+          <p>Custom villager trades, custom enchantments, emotes, random teleports and other little extras.</p>
         </div>
-        <div class="card">
-          <h3>FAIR PLAY</h3>
+
+        <div class="card reveal" data-reveal="120">
+          <div class="card-icon icon-shield">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Fair Play</h3>
           <p>GrimAC anticheat keeps cheaters out so everyone plays on even ground.</p>
         </div>
       </div>
     </section>
 
-    <section id="crew" class="section">
-      <h2 class="section-title">THE CREW</h2>
+    <!-- ============ CREW ============ -->
+    <section id="crew" class="section reveal">
+      <div class="section-head">
+        <span class="kicker">03 — Who runs it</span>
+        <h2 class="section-title">The <span class="grad-text">crew</span></h2>
+      </div>
+
       <div class="crew">
-        <div class="member">
-          <div class="face owner">A</div>
+        <div class="member reveal" data-reveal="0">
+          <div class="avatar owner">A</div>
           <div class="member-info">
             <b>Andy11cool</b>
             <span class="role owner">Owner</span>
           </div>
         </div>
-        <div class="member">
-          <div class="face">R</div>
+        <div class="member reveal" data-reveal="100">
+          <div class="avatar">R</div>
           <div class="member-info">
             <b>ruben7cool</b>
             <span class="role">Crew</span>
@@ -130,64 +184,122 @@
       </div>
     </section>
 
-    <section id="rules" class="section">
-      <h2 class="section-title">RULES</h2>
-      <ol class="rules-list">
-        <li>Be respectful — no toxic chat, no harassment.</li>
-        <li>No griefing or stealing builds.</li>
-        <li>No hacked clients, x-ray, or exploits. Anticheat is watching.</li>
-        <li>No lag machines or giant redstone farms that break the server.</li>
-        <li>Have fun and help each other out.</li>
-      </ol>
-      <p class="hint">Banned? You can appeal below.</p>
-    </section>
-
-    <section id="gallery" class="section">
-      <h2 class="section-title">GALLERY</h2>
-      <div class="gallery">
-        <div class="shot"><span>SCREENSHOT</span></div>
-        <div class="shot"><span>SCREENSHOT</span></div>
-        <div class="shot"><span>SCREENSHOT</span></div>
-        <div class="shot"><span>SCREENSHOT</span></div>
-        <div class="shot"><span>SCREENSHOT</span></div>
-        <div class="shot"><span>SCREENSHOT</span></div>
+    <!-- ============ RULES ============ -->
+    <section id="rules" class="section reveal">
+      <div class="section-head">
+        <span class="kicker">04 — Know the ropes</span>
+        <h2 class="section-title">Server <span class="grad-text">rules</span></h2>
       </div>
-      <p class="hint">More screenshots coming soon. Drop your own into the <code>screenshots/</code> folder and they'll appear here.</p>
+
+      <ol class="rules-list">
+        <li><span class="num">1</span>Be respectful — no toxic chat or harassment.</li>
+        <li><span class="num">2</span>No griefing or stealing builds.</li>
+        <li><span class="num">3</span>No hacked clients, x-ray or exploits. Anticheat is watching.</li>
+        <li><span class="num">4</span>No lag machines or giant farms that break the server.</li>
+        <li><span class="num">5</span>Have fun and help each other out.</li>
+      </ol>
+      <p class="hint center">Banned? Think it was a mistake? <a href="#appeal">Appeal below</a>.</p>
     </section>
 
-    <section id="appeal" class="section">
-      <h2 class="section-title">BAN APPEAL</h2>
-      <p class="lead">Got banned and think it's a mistake? Fill this out and it's emailed to the owner. Appeals go to <b>andy15mb@gmail.com</b>.</p>
-      <form id="appealForm" action="https://formsubmit.co/andy15mb@gmail.com" method="POST" enctype="multipart/form-data">
+    <!-- ============ GALLERY ============ -->
+    <section id="gallery" class="section reveal">
+      <div class="section-head">
+        <span class="kicker">05 — Around the world</span>
+        <h2 class="section-title">Gallery <span class="grad-text">preview</span></h2>
+      </div>
+
+      <div class="gallery">
+        <div class="shot reveal" data-reveal="0">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l4.5-4.5L11 14l3.5-3.5L20 16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Your screenshot</span>
+        </div>
+        <div class="shot reveal" data-reveal="80">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l4.5-4.5L11 14l3.5-3.5L20 16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Your screenshot</span>
+        </div>
+        <div class="shot reveal" data-reveal="160">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l4.5-4.5L11 14l3.5-3.5L20 16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Your screenshot</span>
+        </div>
+        <div class="shot reveal" data-reveal="0">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l4.5-4.5L11 14l3.5-3.5L20 16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Your screenshot</span>
+        </div>
+        <div class="shot reveal" data-reveal="80">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l4.5-4.5L11 14l3.5-3.5L20 16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Your screenshot</span>
+        </div>
+        <div class="shot reveal" data-reveal="160">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l4.5-4.5L11 14l3.5-3.5L20 16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Your screenshot</span>
+        </div>
+      </div>
+      <p class="hint center">Drop your own shots into the <code class="mono">screenshots/</code> folder and they'll appear here.</p>
+    </section>
+
+    <!-- ============ BAN APPEAL ============ -->
+    <section id="appeal" class="section reveal">
+      <div class="section-head">
+        <span class="kicker">06 — Got banned?</span>
+        <h2 class="section-title">Ban <span class="grad-text">appeal</span></h2>
+      </div>
+      <p class="lead center">Fill this out and it's emailed straight to the owner. Appeals go to <a href="mailto:andy15mb@gmail.com">andy15mb@gmail.com</a>.</p>
+
+      <form id="appealForm" action="https://formsubmit.co/andy15mb@gmail.com" method="POST" enctype="multipart/form-data" class="reveal" data-reveal="80">
         <input type="hidden" name="_subject" value="Ban Appeal — Andy's Savar">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="box">
 
-        <label for="f-name">Minecraft username *</label>
-        <input id="f-name" type="text" name="Minecraft Username" required placeholder="e.g. Steve_99">
+        <div class="field">
+          <label for="f-name">Minecraft username *</label>
+          <input id="f-name" type="text" name="Minecraft Username" required placeholder="e.g. Steve_99" autocomplete="off">
+        </div>
 
-        <label for="f-email">Your email *</label>
-        <input id="f-email" type="email" name="Your Email" required placeholder="you@example.com">
+        <div class="field">
+          <label for="f-email">Your email *</label>
+          <input id="f-email" type="email" name="Your Email" required placeholder="you@example.com" autocomplete="email">
+        </div>
 
-        <label for="f-reason">Why were you banned? Tell your side *</label>
-        <textarea id="f-reason" name="Reason" rows="5" required placeholder="Describe what happened..."></textarea>
+        <div class="field">
+          <label for="f-reason">Why were you banned? Tell your side *</label>
+          <textarea id="f-reason" name="Reason" rows="5" required placeholder="Describe what happened…"></textarea>
+        </div>
 
-        <label for="f-evidence">Additional context</label>
-        <textarea id="f-evidence" name="Evidence" rows="3" placeholder="Any extra details that help your case..."></textarea>
+        <div class="field">
+          <label for="f-evidence">Additional context</label>
+          <textarea id="f-evidence" name="Evidence" rows="3" placeholder="Any extra details that help your case…"></textarea>
+        </div>
 
-        <label for="f-file">Screenshot / evidence</label>
-        <input id="f-file" type="file" name="Screenshot" accept="image/*">
+        <div class="field">
+          <label for="f-file">Screenshot / evidence</label>
+          <div class="file-wrap">
+            <input id="f-file" type="file" name="Screenshot" accept="image/*">
+            <div class="file-label">Choose an image…</div>
+          </div>
+        </div>
 
-        <button id="appealSubmit" class="btn big" type="submit">SEND APPEAL</button>
+        <button id="appealSubmit" class="btn primary submit" type="submit">
+          SEND APPEAL
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
         <p id="appealNote" class="hint">This form uses FormSubmit.co to email the owner. You'll be taken to a confirmation page after sending.</p>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>AROUND AND ONLINE — check who's playing below</p>
-    <div id="footerStatus" class="footer-status">Loading status...</div>
-    <p class="footer-note">Andy's Savar &middot; a Minecraft SMP. Owner: Andy11cool &middot; Contact: <a href="mailto:andy15mb@gmail.com">andy15mb@gmail.com</a> or <a href="mailto:andy15mb@proton.me">andy15mb@proton.me</a></p>
+    <div class="footer-inner">
+      <div class="status-glow" aria-hidden="true"></div>
+      <p class="kicker">Around &amp; online</p>
+      <div id="footerStatus" class="status-line">Loading status…</div>
+
+      <div class="footer-links">
+        <a href="mailto:andy15mb@gmail.com" class="mono">andy15mb@gmail.com</a>
+        <a href="mailto:andy15mb@proton.me" class="mono">andy15mb@proton.me</a>
+      </div>
+
+      <p class="footer-note">Andy's Savar &middot; a Minecraft SMP &middot; Owner: Andy11cool</p>
+    </div>
   </footer>
 
   <script src="app.js"></script>
