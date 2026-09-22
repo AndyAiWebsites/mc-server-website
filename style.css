@@ -193,6 +193,17 @@ a:hover { text-decoration: underline; }
   margin: 0 auto 32px;
 }
 
+.hero-beta {
+  font-family: var(--font-head);
+  font-size: clamp(12px, 1.6vw, 15px);
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #a5e4ff;
+  text-shadow: 0 0 10px #38bdf8, 0 0 22px #38bdf8;
+  margin: -8px 0 20px;
+}
+
 .hero-cta {
   display: flex;
   gap: 14px;
