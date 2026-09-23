@@ -1,15 +1,15 @@
 {
   "host": "della-workload.tun.ply.gg",
   "port": 25565,
-  "online": false,
-  "updatedAt": "2026-09-23T20:17:19.510Z",
-  "version": null,
-  "protocol": null,
-  "motd": null,
+  "online": true,
+  "updatedAt": "2026-09-23T20:33:01.788Z",
+  "version": "Paper 26.2",
+  "protocol": 776,
+  "motd": "A Minecraft Server",
   "players": {
     "online": 0,
-    "max": 0,
+    "max": 20,
     "names": []
   },
-  "error": "connect ENETUNREACH 2602:fbaf:800::d6:25565 - Local (:::0)"
+  "error": null
 }
