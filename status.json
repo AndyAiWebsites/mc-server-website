@@ -2,16 +2,14 @@
   "host": "della-workload.tun.ply.gg",
   "port": 25565,
   "online": true,
-  "updatedAt": "2026-09-24T18:19:31.405Z",
+  "updatedAt": "2026-09-24T18:38:00.059Z",
   "version": "Paper 26.2",
   "protocol": 776,
   "motd": "A Minecraft Server",
   "players": {
-    "online": 1,
+    "online": 0,
     "max": 20,
-    "names": [
-      "Andy11cool"
-    ]
+    "names": []
   },
   "error": null
 }
