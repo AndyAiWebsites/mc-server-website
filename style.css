@@ -325,29 +325,25 @@ a:hover { text-decoration: underline; }
 }
 .voxel-cube {
   position: absolute;
-  width: 40px; height: 40px;
+  width: var(--sz, 40px);
+  height: var(--sz, 40px);
   transform-style: preserve-3d;
   animation: voxelFloat 12s ease-in-out infinite;
 }
-.voxel-cube::before,
-.voxel-cube::after {
-  content: '';
+.voxel-face {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(61, 220, 132, 0.25), rgba(34, 211, 238, 0.15));
-  border: 1px solid rgba(61, 220, 132, 0.3);
   border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(135deg, rgba(var(--c, 61, 220, 132), 0.30), rgba(var(--c, 61, 220, 132), 0.08));
+  backface-visibility: hidden;
 }
-.voxel-cube::before { transform: rotateY(0deg) translateZ(20px); }
-.voxel-cube::after { transform: rotateY(90deg) translateZ(20px); }
-.voxel-cube span {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(61, 220, 132, 0.2), rgba(139, 92, 246, 0.15));
-  border: 1px solid rgba(34, 211, 238, 0.25);
-  border-radius: 4px;
-  transform: rotateX(90deg) translateZ(20px);
-}
+.voxel-front  { transform: rotateY(0deg)    translateZ(var(--half, 20px)); }
+.voxel-back   { transform: rotateY(180deg)  translateZ(var(--half, 20px)); }
+.voxel-left   { transform: rotateY(-90deg)  translateZ(var(--half, 20px)); }
+.voxel-right  { transform: rotateY(90deg)   translateZ(var(--half, 20px)); }
+.voxel-top    { transform: rotateX(90deg)   translateZ(var(--half, 20px)); }
+.voxel-bottom { transform: rotateX(-90deg)  translateZ(var(--half, 20px)); }
 
 @keyframes voxelFloat {
   0%, 100% { transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg); }

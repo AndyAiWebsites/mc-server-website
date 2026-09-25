@@ -272,19 +272,24 @@
   var voxelField = document.getElementById("voxelField");
   if (voxelField && !reduceMotion) {
     var VOXELS = 8;
+    var FACE_COLORS = ["139, 92, 246", "34, 211, 238", "61, 220, 132", "251, 191, 36"];
+    var FACE_NAMES = ["front", "back", "left", "right", "top", "bottom"];
     for (var v = 0; v < VOXELS; v++) {
+      var size = 30 + (v % 4) * 10;
       var cube = document.createElement("div");
       cube.className = "voxel-cube";
+      cube.style.setProperty("--sz", size + "px");
+      cube.style.setProperty("--half", (size / 2) + "px");
+      cube.style.setProperty("--c", FACE_COLORS[v % FACE_COLORS.length]);
       cube.style.left = (5 + (v * 13 + (v % 3) * 4) % 88) + "%";
-      cube.style.top = (12 + (((v * 37) % 55))) + "%";
-      cube.style.width = (26 + (v % 4) * 8) + "px";
-      cube.style.height = cube.style.width;
-      var delay = (v % 5) * -2.4;
-      var dur = 11 + (v % 4) * 3;
-      cube.style.animationDelay = delay + "s";
-      cube.style.animationDuration = dur + "s";
-      var bar = document.createElement("span");
-      cube.appendChild(bar);
+      cube.style.top = (12 + ((v * 37) % 55)) + "%";
+      cube.style.animationDelay = ((v % 5) * -2.4) + "s";
+      cube.style.animationDuration = (11 + (v % 4) * 3) + "s";
+      for (var f = 0; f < FACE_NAMES.length; f++) {
+        var face = document.createElement("span");
+        face.className = "voxel-face voxel-" + FACE_NAMES[f];
+        cube.appendChild(face);
+      }
       voxelField.appendChild(cube);
     }
   }
